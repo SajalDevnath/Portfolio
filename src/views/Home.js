@@ -1,7 +1,8 @@
 import React from "react";
 import { BsGithub, BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
 import { SiPexels } from "react-icons/si";
-import bg from "../assets/bg.jpg";
+import hero from "../assets/hero-reborn.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -10,7 +11,15 @@ const Home = () => {
         <div className=" h-screen col-start-1 col-end-3 w-full flex flex-col p-5 pl-10">
           <div>
             <ul className="flex flex-col items-start font-medium font-cuprum text-lg tracking-wide">
-              <li> Projects </li> <li> About </li> <li> Contact </li>
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>{" "}
+              <li>
+                <Link to="/about">About</Link>
+              </li>{" "}
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col items-start justify-end absolute bottom-8 font-cuprum">
@@ -25,7 +34,7 @@ const Home = () => {
           </div>
         </div>
         <div className="col-start-3 col-end-11 flex justify-center items-center">
-          <img src={bg} className="h-[36rem] rounded-full" />
+          <img src={hero} className="h-[36rem] rounded-full" />
         </div>
         <div className="col-start-11 col-end-13 flex justify-end items-center p-5 pr-10">
           <div className="flex flex-col space-y-14 opacity-95">
